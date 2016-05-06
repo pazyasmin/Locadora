@@ -5,6 +5,7 @@
 
 #include "Data\Movie.h"
 #include "Data\Game.h"
+#include "Data\Book.h"
 
 unsigned int RentalOrder::s_globalId = 0;
 
@@ -77,6 +78,10 @@ std::ostream& operator<<(std::ostream& os, const RentalOrder* o)
     {
       os << dynamic_cast<Game*>(items.at(i)) << std::endl << std::endl;
     }
+	else if (dynamic_cast<Book*>(item) != nullptr)
+	{
+		os << dynamic_cast<Book*>(items.at(i)) << std::endl << std::endl;
+	}
   }
 	return os;
 }

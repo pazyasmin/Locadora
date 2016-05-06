@@ -6,6 +6,7 @@
 #include "Data\Catalog.h"
 #include "Data\Movie.h"
 #include "Data\Game.h"
+#include "Data\Book.h"
 #include "Store\Manager.h"
 
 int main()
@@ -28,10 +29,15 @@ int main()
   c2->addItem(new Game("Anarchy Reigns", 2012, "An action-fighting game in which players assume the role of survivors battling their way through a post-apocalyptic world.", "Sega", GenreType::Action, 1, "Xbox 360", MediaType::Game_DVD));
   c2->addItem(new Game("Heavy Rain", 2010, "A city on the US east coast is being terrorized by the 'Origami Killer', whose victims are all discovered drowned.", "Sony", GenreType::Drama | GenreType::Horror, 1, "PlayStation 4", MediaType::Game_BluRay));
   
+  Catalog* c3 = new Catalog(CatalogType::Books);
+  
+  c3->addItem(new Book("The Dead Zone", 1979, "John Smith awakens from a coma to discover he has a psychic detective ability.", "Viking Press", GenreType::Horror, 4, "Stephen King", MediaType::Book_Hardcover));
+
 
   ICatalogManager* cmgr = Manager::instance().catalogManager();
   cmgr->addCatalog(c1);
   cmgr->addCatalog(c2);
+  cmgr->addCatalog(c3);
 
   Application app;
   app.run();

@@ -19,12 +19,6 @@ public:
   // Returns the customer id.
   unsigned int getCustomerId() const override;
 
-  // Sets a customer address.
-  void setAddress(const char* address) override;
-
-  // Returns a customer address.
-  const char* getAddress() const override;
-
   // Adds a rental to the history of this customer.
   void addRentalOrder(IRentalOrder* order) override;
 
@@ -39,7 +33,6 @@ private:
 
   unsigned int _customerId;
   std::string _name;
-  std::string _address;
 
   std::vector<IRentalOrder*> _rentals;
 };

@@ -22,6 +22,9 @@ Catalog::Catalog(CatalogType type)
   _mediaRentValues.insert(std::pair<MediaType, float>(MediaType::Movie_DVD, 3.5f));
   _mediaRentValues.insert(std::pair<MediaType, float>(MediaType::Movie_BluRay, 5.0f));
 
+  _mediaRentValues.insert(std::pair<MediaType, float>(MediaType::Book_Paperback, 2.0f));
+  _mediaRentValues.insert(std::pair<MediaType, float>(MediaType::Book_Hardcover, 5.0f));
+
 }
 
 Catalog::~Catalog()

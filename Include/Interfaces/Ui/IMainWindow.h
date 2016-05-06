@@ -1,17 +1,5 @@
 #pragma once
 
-enum PageType
-{
-  HomePage,
-  ProductPage,
-  CartPage,
-  CheckoutPage,
-  CheckoutCompletePage,
-  CheckoutFailPage,
-  OrdersPage,
-  VerifyOrderPage
-};
-
 // Responsible for storing and managing the store's interface elements.
 class IMainWindow
 {

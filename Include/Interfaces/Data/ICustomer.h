@@ -2,7 +2,6 @@
 
 #include <vector>
 
-class IAddress;
 class IRentalOrder;
 
 // Contains customer-related data, such as name, list of rentals, etc.
@@ -19,12 +18,6 @@ public:
 
   // Returns the customer id.
   virtual unsigned int getCustomerId() const = 0;
-
-  // Sets a customer address.
-  virtual void setAddress(const char* address) = 0;
-
-  // Returns the registered address for this customer.
-  virtual const char* getAddress() const = 0;
 
   // Adds a rental to the history of this customer.
   virtual void addRentalOrder(IRentalOrder* order) = 0;

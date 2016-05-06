@@ -19,7 +19,10 @@ enum MediaType
   Game_BluRay,
   Movie_VHS,
   Movie_DVD,
-  Movie_BluRay
+  Movie_BluRay,
+  Book_Hardcover,
+  Book_Paperback
+
 };
 
 // Represents an item to be rented, such as movie, game, etc.

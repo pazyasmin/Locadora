@@ -12,6 +12,7 @@
 #include "Data\Customer.h"
 #include "Data\Movie.h"
 #include "Data\Game.h"
+#include "Data\Book.h"
 #include "Data\RentalOrder.h"
 #include "Store\Manager.h"
 #include "Ui\ToolbarElement.h"
@@ -431,7 +432,11 @@ std::vector<IItem*> MainWindow::_getOrderItems()
       {
         std::cout << dynamic_cast<Game*>(itemsInCatalog.at(i)) << std::endl;
       }
-      else
+	  else if (dynamic_cast<Book*>(itemsInCatalog.at(i)) != nullptr)
+	  {
+		  std::cout << dynamic_cast<Book*>(itemsInCatalog.at(i)) << std::endl;
+	  }
+	else
       {
         throw std::bad_cast("Invalid item type.");
       }
@@ -577,7 +582,7 @@ void MainWindow::_closeOrdersForCustomer(ICustomer* customer)
         {
           selection = std::stoi(command);
 
-          if (!(selection == 1 || selection == 2))
+          if (!(selection == 1 || selection == 2 || selection == 3))
           {
             throw std::exception("Selection out of bounds.");
           }

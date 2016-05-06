@@ -7,6 +7,7 @@ CatalogManager::CatalogManager()
 {
   _catalogNames.insert(std::pair<CatalogType, const char*>(CatalogType::Games, "Games"));
   _catalogNames.insert(std::pair<CatalogType, const char*>(CatalogType::Movies, "Movies"));
+  _catalogNames.insert(std::pair<CatalogType, const char*>(CatalogType::Books, "Books"));
 }
 
 CatalogManager::~CatalogManager()

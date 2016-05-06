@@ -7,7 +7,8 @@ class IItem;
 enum CatalogType
 {
   Movies,
-  Games
+  Games,
+  Books
 };
 
 class ICatalog

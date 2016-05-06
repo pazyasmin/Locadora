@@ -39,16 +39,6 @@ unsigned int Customer::getCustomerId() const
   return _customerId;
 }
 
-void Customer::setAddress(const char* address)
-{
-  _address = address;
-}
-
-const char* Customer::getAddress() const
-{
-  return _address.c_str();
-}
-
 void Customer::addRentalOrder(IRentalOrder* rental)
 {
   if (rental != nullptr)
