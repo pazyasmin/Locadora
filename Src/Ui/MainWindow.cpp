@@ -532,7 +532,7 @@ void MainWindow::_closeOrdersForCustomer(ICustomer* customer)
       {
         std::cout << std::endl
           << dynamic_cast<const RentalOrder*>(openOrders.at(i)) << std::endl
-          << "[" << i + 1 << "] Close rental order." << std::endl;
+          << "[" << i + 1 << "] Return rental." << std::endl;
       }
 
       std::cout << std::endl
@@ -735,3 +735,5 @@ float MainWindow::_getTotalOrderValue(IRentalOrder* order)
 
   return orderValue;
 }
+
+

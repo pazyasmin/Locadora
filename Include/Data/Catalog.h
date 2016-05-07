@@ -39,5 +39,5 @@ public:
 private:
 	CatalogType _catalogType;
 	std::vector<IItem*> _items;
-  std::map<MediaType, float> _mediaRentValues;
+	std::map<MediaType, float> _mediaRentValues;
 };

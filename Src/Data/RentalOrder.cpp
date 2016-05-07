@@ -60,6 +60,18 @@ const std::vector<IItem*> RentalOrder::getItems() const
 	return _rentalOrder;
 }
 
+RentalOrder& RentalOrder::operator+=(const RentalOrder& ro)
+{
+	_rentalOrder = ro._rentalOrder;
+	_orderId = s_globalId;
+	s_globalId++;
+	for (int i = 0; i < _rentalOrder.size(); i++)
+	{
+		_rentalOrder.push_back(ro._rentalOrder.at(i));
+	}
+	return *this;
+}
+
 std::ostream& operator<<(std::ostream& os, const RentalOrder* o)
 {
   os << "Rental order date: " << o->getRentalDate() << std::endl
@@ -85,3 +97,6 @@ std::ostream& operator<<(std::ostream& os, const RentalOrder* o)
   }
 	return os;
 }
+
+
+
