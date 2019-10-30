@@ -1,2 +1,2 @@
-# Locadora
-Atividade final de Programação II
+# Rental Store
+Final assignment of my object-oriented programming class.
